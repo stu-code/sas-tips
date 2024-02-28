@@ -21,3 +21,39 @@
    clause that minimizes the time difference. Since it's SQL, you can do as 
    many data transformations as you want all at the same time.
 */
+
+/* Read data: GPS and Heartrate data */
+filename gps http 'https://raw.githubusercontent.com/stu-code/sas-tips/main/data/GPS.csv';
+filename hr  http 'https://raw.githubusercontent.com/stu-code/sas-tips/main/data/HEARTRATE.csv';
+
+/* GPS Data */
+proc import
+    file = gps
+    out  = gps
+    dbms = csv
+    replace;
+run;
+
+/* Heartrate data */
+proc import
+    file = hr
+    out  = hr
+    dbms = csv
+    replace;
+run;
+
+/* Fuzzy merge heartrate data with GPS data by time. Left-join them by the minute
+   and find the closest timestamp that matches. */
+proc sql;
+    create table want(drop=dif) as
+        select distinct gps.*, hr.bpm, abs(gps.timestamp - hr.timestamp) as dif
+         from gps
+         LEFT JOIN
+              hr
+         ON dhms(datepart(gps.timestamp), hour(gps.timestamp), minute(gps.timestamp), 0)
+          = dhms(datepart(hr.timestamp), hour(hr.timestamp), minute(hr.timestamp), 0)
+         group by gps
+         having dif = min(dif)
+         order by gps.timestamp
+    ;
+quit;
