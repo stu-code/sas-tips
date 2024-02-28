@@ -52,7 +52,7 @@ proc sql;
               hr
          ON dhms(datepart(gps.timestamp), hour(gps.timestamp), minute(gps.timestamp), 0)
           = dhms(datepart(hr.timestamp), hour(hr.timestamp), minute(hr.timestamp), 0)
-         group by gps
+         group by gps.timestamp
          having dif = min(dif)
          order by gps.timestamp
     ;
