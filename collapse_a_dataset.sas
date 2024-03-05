@@ -27,8 +27,8 @@
 
 /**** Sample data ****/
 data have;
-	input id var1 var2 var3$;
-	datalines;
+    input id var1 var2 var3$;
+    datalines;
 1 .  . a
 1 10 . .
 1 . 20 .
@@ -43,7 +43,7 @@ run;
 
 /* The Update Trick */
 data want;
-	update have(obs=0)
+    update have(obs=0)
            have;
     by id;
 run;
