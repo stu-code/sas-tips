@@ -44,37 +44,37 @@ run;
 /* The Update Trick */
 data want;
 	update have(obs=0)
-		   have;
-	by id;
+           have;
+    by id;
 run;
 
 /* But what if you didn't have by-groups? Simply add one.*/
 
 /**** Sample data ****/
 data have2;
-	array charvar[10] $;
+    array charvar[10] $;
 
-	/* Make characters */
-	do i = 1 to 10;
-		charvar[i] = byte(96+i);
-		output;
-		charvar[i] = '';
-	end;
+    /* Make characters */
+    do i = 1 to 10;
+        charvar[i] = byte(96+i);
+        output;
+        charvar[i] = '';
+    end;
 
-	drop i;
+    drop i;
 run;
 
 /* Add a constant ID column */
 data have2_id;
-	set have2;
-	id = 1;
+    set have2;
+    id = 1;
 run;
 
 /* Do the update trick */
 data want2;
-	update have2_id(obs=0)
-		   have2_id;
-	by id;
+    update have2_id(obs=0)
+           have2_id;
+    by id;
 
-	drop id;
+    drop id;
 run;
