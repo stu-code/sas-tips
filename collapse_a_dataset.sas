@@ -15,14 +15,14 @@
                    | https://github.com/stu-code
 ****************************************************/
 
-/* Suppose you have a sparse dataset with by-groups, and
-   you need to collapse it down to a single row per group.
-   Beyond set, merge and modify, there is a fourth DATA Step statement
-   called "update." The properties of the update statement can be
-   applied in a neat trick that collapses all of the rows in
-   only five lines of code. Though, it could just be all one line
-   because SAS ends statements with semi-colons, but c'mon. 
-   No one does that.
+/* Suppose you have a sparse dataset of both numeric and 
+   character variables with by-groups, and you need to collapse 
+   it down to a single row per group. Beyond set, merge and modify, 
+   there is a fourth DATA Step statement called "update." The 
+   properties of the update statement can be applied in a neat trick 
+   that collapses all of the rows in only five lines of code. 
+   Though, it could just be all one line because SAS ends statements 
+   with semi-colons, but c'mon. No one does that.
 */
 
 /**** Sample data ****/
