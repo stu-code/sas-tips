@@ -91,7 +91,8 @@ run;
    This method makes use of loading a separate dataset and grabbing values one step ahead.
    You can generalize this to be n steps ahead, and even account for by-groups.
 
-   Check out the %lead macro for a generalized version of this.
+   Check out the %lead macro for a generalized version of this:
+   https://github.com/stu-code/sas/blob/master/utility-macros/lead.sas
 */
 
 data air_lead_method3;
@@ -108,6 +109,7 @@ data air_lead_method3;
     rc = fetchobs(dsid, _N_+10);
     lead10_air = getvarn(dsid, varnum(dsid, "air"));
 
+    /* If you have character variables, use getvarc instead */
     drop rc dsid;
 run;
 
@@ -126,8 +128,8 @@ filename program url 'https://raw.githubusercontent.com/stu-code/sas/master/util
 /* Calculate two leads ahead for one variable */
 %lead(data=sashelp.air, out=air_lead_macro2, var=air, lead=2);
 
-/* Calculate one lead ahead for two variables and rename them */
-%lead(data=sashelp.stocks, out=stocks_lead_macro1, var=open close, rename=open_lead close_lead, lead=10);
+/* Calculate one lead ahead for two variables, rename them, and add dataset options */
+%lead(data=sashelp.stocks(where=(stock='IBM')), out=stocks_lead_macro1, var=open close, rename=open_lead close_lead, lead=10);
 
-/* Calculate 10 leads ahead with a by-group and add dataset options*/
-%lead(data=sashelp.stocks(obs=250), out=stocks_lead_by_macro2, var=open, by=stock, lead=10);
+/* Calculate 10 leads ahead with a by-group */
+%lead(data=sashelp.stocks, out=stocks_lead_by_macro2, var=open, by=stock, lead=10);
