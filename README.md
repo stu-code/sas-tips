@@ -20,3 +20,4 @@ Date          | Program       | Description
 02/20/24 | sort_dedupe_with_a_data_step.sas | Both sort and dedupe data using only a DATA Step
 02/27/24 | fuzzy_left_join_by_time.sas | Perform a fuzzy left join on two datasets with differing time intervals
 03/05/24 | collapse_a_dataset.sas | Collapse a sparse dataset down to only a single row per by group
+03/12/24 | lead_methods.sas | 3 ways to create a lead in SAS, plus an efficient DATA Step lead macro
