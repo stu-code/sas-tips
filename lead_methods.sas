@@ -14,9 +14,9 @@
                    | https://github.com/stu-code
 ****************************************************/
 
-/* The coveted 'lead' function does not exist in SAS. But, there are
-   a number of easy ways you can do it. Here are three methods to
-   generate a lead.
+/* The coveted 'lead' function does not exist in SAS in a DATA Step.
+   But, there are a number of easy ways you can do it. 
+   Here are three methods to generate a lead.
 */
 
 /***************************************
@@ -84,7 +84,7 @@ run;
 
 /* You can actually perform leads with a DATA step
    thanks to some great research done by Andrew Gannon.
-   Check ou this paper 3699-2019: 
+   Check out this paper 3699-2019: 
    Calculating Leads (and Lags) in SAS®: One Problem, Many Solutions 
    https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2019/3699-2019.pdf
 
@@ -113,7 +113,7 @@ data air_lead_method3;
     drop rc dsid;
 run;
 
-/* The macro version of the above. It is highoy performant in many situations and handles:
+/* The macro version of the above. It is highly performant in many situations and handles:
     - By-groups
     - Any number of lags
     - Any number of variables
