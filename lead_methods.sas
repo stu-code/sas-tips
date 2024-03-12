@@ -33,7 +33,7 @@ proc expand data=sashelp.air out=air_lead_method1(drop=time);
 run;
 
 /* It also works with by-groups */
-proc expand data=sashelp.stocks out=air_lead_by_method1(drop=time);
+proc expand data=sashelp.stocks out=stocks_lead_by_method1(drop=time);
     by stock;
     convert close=close_lead1  / method=none transform=(lead 1);
     convert close=close_lead10 / method=none transform=(lead 10);
