@@ -95,7 +95,7 @@ libname sqlite odbc
 options sastrace=',,,d' sastraceloc=saslog;
 
 proc sql noprint;
-    create table car_parts as
+    create table foo as
     select count(part_id) as total_parts
     from sqlite.car_parts;
 quit;
@@ -103,7 +103,7 @@ quit;
 /* You can even check what it does with a data step. Here, you'll see that 
    it passes the where statement to filter the data first, but it will do 
    the rest of the processing in SAS. */
-data want;
+data foo2;
     set sqlite.car_parts;
     where manufacture_end_date > '01JAN2015'd;
 
@@ -121,7 +121,7 @@ run;
 /* You can do other things, like get summary statistics */
 options sastrace=',,,s' sastraceloc=saslog;
 
-data want;
+data foo3;
     set sqlite.dealers;
     flag = (dealer_name = 'Joes Autos');
 run;
@@ -132,7 +132,7 @@ run;
 proc sql;
     connect using sqlite;
 
-    create table want2 as
+    create table foo4 as
         select *
         from connection to sqlite
             (select count(part_id) as total_parts
@@ -142,3 +142,6 @@ proc sql;
 
     disconnect from sqlite;
 quit;
+
+/* Turn tracing off */
+options sastrace=none;
