@@ -21,3 +21,4 @@ Date          | Program       | Description
 02/27/24 | fuzzy_left_join_by_time.sas | Perform a fuzzy left join on two datasets with differing time intervals
 03/05/24 | collapse_a_dataset.sas | Collapse a sparse dataset down to only a single row per by group
 03/12/24 | lead_methods.sas | 3 ways to create a lead in SAS, plus an efficient DATA Step lead macro
+03/19/24 | sastrace.sas | See what your database is doing when running SAS code against it in only one line of code
