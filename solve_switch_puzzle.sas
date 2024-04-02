@@ -45,7 +45,7 @@ proc optmodel;
     set SWITCHES init {1..6};
 
     /* These are the top and bottom values */
-    num top{SWITCHES} = [3 3 5 1 2 4] ;
+    num top{SWITCHES} = [3 3 5 1 2 4];
     num bot{SWITCHES} = [1 5 6 5 2 2];
 
     /* Switch positions: top or bottom */
