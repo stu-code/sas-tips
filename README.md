@@ -22,3 +22,4 @@ Date          | Program       | Description
 03/05/24 | [collapse_a_dataset.sas](https://github.com/stu-code/sas-tips/blob/main/collapse_a_dataset.sas) | Collapse a sparse dataset down to only a single row per by group
 03/12/24 | [lead_methods.sas](https://github.com/stu-code/sas-tips/blob/main/lead_methods.sas) | 3 ways to create a lead in SAS, plus an efficient DATA Step lead macro
 03/19/24 | [sastrace.sas](https://github.com/stu-code/sas-tips/blob/main/sastrace.sas) | See what your database is doing when running SAS code against it in only one line of code
+04/02/24 | [solve_switch_puzzle.sas](https://github.com/stu-code/sas-tips/blob/main/solve_switch_puzzle.sas) | Using OPTMODEL to solve the switch puzzle from the 2010 survival horror game, Amnesia: The Dark Descent
