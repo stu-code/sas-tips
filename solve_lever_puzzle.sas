@@ -25,7 +25,8 @@
    
   The position of the lever in the center can either be up or down. If a
   lever is down, the number on the bottom is activated. If the lever is up,
-  the number on the top is activated. The sum of the activated numbers must be 8.
+  the number on the top is activated. The sum of the activated numbers on the top
+  must be 8, and the sum of the activated numbers on the bottom must be 8.
   What's a data scientist to do? Well, I can't be bothered spending time guessing
   and checking. Let's make the computer do that with OPTMODEL. All we need to do
   is translate this puzzle into an optimization problem:
