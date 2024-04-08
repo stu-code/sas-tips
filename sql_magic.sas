@@ -21,7 +21,7 @@
         - Hash
   You can influence the last three with the SQL "magic" option.
   - magic=101: Sequential loop
-  - magic=102: Sort-Merge
+  - magic=102: Sort Merge
   - magic=103: Hash join
 
   Personally, I try to use hash joins whenever possible because memory is cheap
@@ -83,7 +83,7 @@ proc sql magic=101;
 quit;
 
 /*************************************************/
-/********** MAGIC=102: Sort-merge Join ***********/
+/********** MAGIC=102: Sort Merge Join ***********/
 /**** Good for when data can't fit in memory *****/
 /*************************************************/
 
