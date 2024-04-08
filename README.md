@@ -23,3 +23,4 @@ Date          | Program       | Description
 03/12/24 | [lead_methods.sas](https://github.com/stu-code/sas-tips/blob/main/lead_methods.sas) | 3 ways to create a lead in SAS, plus an efficient DATA Step lead macro
 03/19/24 | [sastrace.sas](https://github.com/stu-code/sas-tips/blob/main/sastrace.sas) | See what your database is doing when running SAS code against it in only one line of code
 04/02/24 | [solve_lever_puzzle.sas](https://github.com/stu-code/sas-tips/blob/main/solve_lever_puzzle.sas) | Use OPTMODEL to solve the [lever puzzle](https://amnesia.fandom.com/wiki/Machine_Room#Walkthrough) from the 2010 survival horror game, Amnesia: The Dark Descent
+04/09/24 | [sql_magic.sas](https://github.com/stu-code/sas-tips/blob/main/sql_magic.sas) | Influence the SQL optimizer with magic to improve join performance. Seriously.
