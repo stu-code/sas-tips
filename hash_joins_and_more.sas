@@ -288,17 +288,6 @@ data smalldata_inner;
     if(lookup.Find() = 0);
 run;
 
-data smalldata_inner;
-    set bigdata;
-
-    if(_N_ = 1) then do;
-        dcl hash lookup(dataset: 'smalldata');
-            lookup.defineKey('group', 'obs');
-        lookup.defineDone();
-    end;
-
-    if(lookup.Find() = 0);
-run;
 
 /******************************************/
 /******************************************/
