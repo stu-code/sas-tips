@@ -17,7 +17,7 @@
 /* Hash tables are an extremely powerful tool in SAS that can be used to 
    perform ultra-fast joins, arbitrarily traverse them, build in-memory tables, output them, 
    and much more.  The simplest use case of a hash table is using it to look up one or more values
-   and pull them down into the table. The beauty of a hash table is that you do
+   and pull them down into the DATA Step. The beauty of a hash table is that you do
    do not need to pre-sort your data when joining and you get to use all the power of the 
    DATA Step without complex sets of SQL CASE statements or doing a bunch of separate steps to
    get what you need. Think of a hash table as this in-memory table that floats in space. 
