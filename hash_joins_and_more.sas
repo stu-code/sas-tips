@@ -14,7 +14,7 @@
                    | https://github.com/stu-code
 ****************************************************/
 
-/* Hash table sare an extremely powerful tool in SAS that can be used to 
+/* Hash tables are an extremely powerful tool in SAS that can be used to 
    perform ultra-fast joins, arbitrarily traverse them, build in-memory tables, output them, 
    and much more.  The simplest use case of a hash table is using it to look up one or more values
    and pull them down into the table. The beauty of a hash table is that you do
@@ -24,12 +24,12 @@
    It's independent of the data that you're reading from in a set or merge statement. 
    The hash table has two important values:
 
-   1. keys - This is the lookup value or set of values that you need to match in your dataset
-   2. data - This is the data that will be pulled from your hash table down into the data step
+   1. Keys - This is the lookup value or set of values that you need to match in your dataset
+   2. Data - This is the data that will be pulled from your hash table down into the data step and vis-versa
 
    With these two things, you can do some seriously powerful stuff.
 
-   It also has two very important default property that you should not forget:
+   It also has a very important default property that you should not forget:
    
    ***** Hash tables will remove any duplicate keys and keep the first unique set of keys *****
 
