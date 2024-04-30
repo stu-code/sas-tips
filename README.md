@@ -24,3 +24,4 @@ Date          | Program       | Description
 03/19/24 | [sastrace.sas](https://github.com/stu-code/sas-tips/blob/main/sastrace.sas) | See what your database is doing when running SAS code against it in only one line of code
 04/02/24 | [solve_lever_puzzle.sas](https://github.com/stu-code/sas-tips/blob/main/solve_lever_puzzle.sas) | Use OPTMODEL to solve the [lever puzzle](https://amnesia.fandom.com/wiki/Machine_Room#Walkthrough) from the 2010 survival horror game, Amnesia: The Dark Descent
 04/09/24 | [sql_magic.sas](https://github.com/stu-code/sas-tips/blob/main/sql_magic.sas) | Influence the SQL optimizer with magic to improve join performance. Seriously.
+04/30/24 | [hash_joins_and_more.sas](https://github.com/stu-code/sas-tips/blob/main/hash_joins_and_more.sas) | Learn how to do ultra fast joins with the DATA Step without needing to sort and more! You'll never join tables the same way again.
