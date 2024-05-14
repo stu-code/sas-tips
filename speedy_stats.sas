@@ -34,10 +34,10 @@ libname casuser cas caslib='casuser';
 /* Create a billion random obs drawn from a standard normal distribution */
 data billion;
     do i = 1 to 1000000000;
-		x = rand('normal');
+        x = rand('normal');
         output;
     end;
-	drop i;
+    drop i;
 run;
 
 /* Load to CAS */
@@ -49,8 +49,8 @@ run;
 proc summary data=billion ;
     var x;
     output out=stats 
-    	min= max= n= nmiss= mean= sum= std= stderr=
-		var= uss= css= cv= t= prt= skewness= kurtosis=
+        min= max= n= nmiss= mean= sum= std= stderr=
+	    var= uss= css= cv= t= prt= skewness= kurtosis=
     / autoname;
 quit;
 
@@ -58,13 +58,13 @@ quit;
 proc hpsummary data=billion ;
     var x;
     output out=stats 
-    	min= max= n= nmiss= mean= sum= std= stderr=
-		var= uss= css= cv= t= prt= skewness= kurtosis=
+        min= max= n= nmiss= mean= sum= std= stderr=
+        var= uss= css= cv= t= prt= skewness= kurtosis=
     / autoname;
 quit;
 
 /* CAS-powered MDSUMMARY */
 proc mdsummary data=casuser.billion;
-	var x;
-	output out=casuser.stats;
+    var x;
+    output out=casuser.stats;
 quit;
