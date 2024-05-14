@@ -50,7 +50,7 @@ proc summary data=billion ;
     var x;
     output out=stats 
         min= max= n= nmiss= mean= sum= std= stderr=
-	    var= uss= css= cv= t= prt= skewness= kurtosis=
+        var= uss= css= cv= t= prt= skewness= kurtosis=
     / autoname;
 quit;
 
