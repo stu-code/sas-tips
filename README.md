@@ -26,4 +26,4 @@ Date          | Program       | Description
 04/09/24 | [sql_magic.sas](https://github.com/stu-code/sas-tips/blob/main/sql_magic.sas) | Influence the SQL optimizer with magic to improve join performance. Seriously.
 04/30/24 | [hash_joins_and_more.sas](https://github.com/stu-code/sas-tips/blob/main/hash_joins_and_more.sas) | Learn how to do ultra fast joins with the DATA Step without needing to sort and more! You'll never join tables the same way again.
 05/07/24 | [get_va_report_data_sources.sas](https://github.com/stu-code/sas-tips/blob/main/get_va_report_data_sources.sas) | A program that automatically identifies the data sources in Visual Analytics reports on a Viya server
-05/13/24 | [speedy_stats.sas](https://github.com/stu-code/sas-tips/blob/main/speedy_stats.sas) | Calculate over a dozen statistics on a billion rows of data in seconds
+05/14/24 | [speedy_stats.sas](https://github.com/stu-code/sas-tips/blob/main/speedy_stats.sas) | Calculate over a dozen statistics on a billion rows of data in seconds
