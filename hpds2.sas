@@ -32,7 +32,7 @@
 
     We'll compare it with DS2 and HPDS2 to see which is faster.
 
-    Data Credit: Project Gutenberg EText of Illinois Benedictine College
+    Data Credit: Project Gutenberg EText #100 by Illinois Benedictine College
                  https://www.gutenberg.org/
 */
 
