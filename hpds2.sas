@@ -31,13 +31,16 @@
     \b(lov\w*)\b
 
     We'll compare it with DS2 and HPDS2 to see which is faster.
+
+    Data Credit: Project Gutenberg EText of Illinois Benedictine College
+                 https://www.gutenberg.org/
 */
 
 filename resp temp;
 
 /* Download all of Shakespeare's works */
 proc http 
-    url='https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt'
+    url='https://raw.githubusercontent.com/stu-code/sas-tips/main/data/shakespeare.txt'
     out=resp
     method=get;
 run;
