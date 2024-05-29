@@ -42,7 +42,7 @@ run;
 /**** uuidgen(), _N_, and _THREADID_ ****/
 /****************************************/
 
-/* Create a unqiue ID three ways in CAS:
+/* Create a unique ID three ways in CAS:
    1. Use uuidgen() 
    2. Concatenate _N_ with _THREADID_
    3. Use the cantor pairing function for a numeric unique ID:
