@@ -44,7 +44,7 @@ run;
 
 /* Create a unique ID three ways in CAS:
    1. Use uuidgen() 
-   2. Concatenate _N_ with _THREADID_
+   2. Concatenate _THREADID_ with _N_
    3. Use the cantor pairing function for a numeric unique ID:
       cantor(a, b) = 1/2*(a + b)(a + b + 1) + b 
 
@@ -59,7 +59,7 @@ data casuser.cars;
     set casuser.cars;
 
     uuid    = uuidgen();
-    char_id = cats(_N_, '_', _THREADID_);
+    char_id = cats(_THREADID_, '_', _N_);
     num_id  = 1/2*(_THREADID_ + _N_)*(_THREADID_ + _N_ + 1) + _N_;
 run;
 
