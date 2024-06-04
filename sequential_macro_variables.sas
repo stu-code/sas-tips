@@ -57,3 +57,19 @@ data _null_;
        DATA step iteration */
     call symputx('n_macvars', _N_); 
 run;
+
+/* What's nice about the DATA Step is that you can do things like subsetting
+   if statements to do additional logic and then create your macro variables 
+   after that statement */
+data _null_;
+    set sashelp.cars;
+
+    if(horsepower > 250);
+    n+1;
+
+    call symputx(cats('macvar', n), model);
+    call symputx('n_macvars', n); 
+run;
+
+%put Total macro variableS: &n_macvars;
+%list_macvars;
