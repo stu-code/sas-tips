@@ -29,7 +29,7 @@ caslib _ALL_ assign;
 
 /****************************************/
 /*************** Option 1 ***************/
-/*************** rowid=yes **************/
+/************* addrowid=yes *************/
 /****************************************/
 
 /* Use the addrowid=yes option to add your row ID as you load it into CAS */
