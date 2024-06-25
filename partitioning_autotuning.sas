@@ -27,7 +27,7 @@
    partitions first, then saving them as a part of the dataset. You can specify
    your validation and test datsets within the partition statement:
    
-   partition roleVar=Group(test='Group 1' train='Group 2')
+   partition role=GroupVar(test='Group 1' train='Group 2')
 
    To create these initial partitions, use PROC PARTITION first.
 */
@@ -39,31 +39,43 @@ caslib _ALL_ assign;
 filename data http 'https://raw.githubusercontent.com/sassoftware/sas-viya-dmml-pipelines/master/data/hmeq.csv';
 
 proc import 
-	file=data
-	out=casuser.hmeq
-	dbms=csv
-	replace;
+    file=data
+    out=casuser.hmeq
+    dbms=csv
+    replace;
 run;
 
-/* Train, partition, and autotune a gradient boosting model */
-proc gradboost data=casuser.hmeq outmodel=casuser.gradboost_model;
-	partition fraction(validate=0.3 seed=42);
-	autotune;
-	target bad / level=nominal;
-	input loan mortdue value yoj 
-	 	  derog delinq clage ninq clno debtinc
-	;
-	input reason job / level=nominal;
+proc gradboost data=casuser.hmeq;
+    partition fraction(validate=0.3 seed=42);
+    autotune;
+    target bad / level=nominal;
+    input loan mortdue value yoj derog delinq clage ninq clno debtinc;
+    input reason job / level=nominal;
 run;
 
 /* Train, partition, and autotune a fully connected neural network */
 proc nnet data=casuser.hmeq;
-	train outmodel=casuser.nnet_model;
-	partition fraction(validate=0.3 seed=42);
-	autotune;
-	target bad / level=nominal;
-	input loan mortdue value yoj 
-	 	  derog delinq clage ninq clno debtinc
-	;
-	input reason job / level=nominal;
+    train outmodel=casuser.nnet_model;
+    partition fraction(validate=0.3 seed=42);
+    autotune;
+    target bad / level=nominal;
+    input loan mortdue value yoj 
+     	  derog delinq clage ninq clno debtinc
+    ;
+    input reason job / level=nominal;
+run;
+
+/* Partitioning ahead of time and then passing it into a partition statement.
+   1 = Train
+   0 = Validate */
+proc partition data=casuser.hmeq partind samppct=70 seed=42;
+    output out=casuser.hmeq_partition;
+run;
+
+proc gradboost data=casuser.hmeq_partition;
+    partition role=_PartInd_(train='1' validate='0');
+    autotune;
+    target bad / level=nominal;
+    input loan mortdue value yoj derog delinq clage ninq clno debtinc;
+    input reason job / level=nominal;
 run;
