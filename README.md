@@ -9,7 +9,7 @@
                                         # #####     #           #   ######  
                         
                                                        T I P S 
-                                 Fancy ASCII art until I can do something cool in GIMP
+                  Fancy ASCII art until I can do something cool in GIMP (which may never happen at this point)
 
 A collection of SAS examples and tips. All SAS programs are self-contained and will run independently. 
 Any programs with an external data dependency are downloaded within the program from the data folder.
@@ -31,3 +31,4 @@ Date          | Program       | Description | Tags
 05/28/24 | [unique_ids_in_cas.sas](https://github.com/stu-code/sas-tips/blob/main/unique_ids_in_cas.sas) | Create a unique row ID three different ways in CAS | CAS, Data Engineering, Viya
 06/04/24 | [sequential_macro_variables.sas](https://github.com/stu-code/sas-tips/blob/main/sequential_macro_variables.sas) | Two ways to dynamically generate sequentially-ordered macro variables with SQL and the DATA Step | Data Engineering, DATA Step, Macro, SQL
 06/25/24 | [partitioning_autotuning.sas](https://github.com/stu-code/sas-tips/blob/main/partitioning_autotuning.sas) | Autotune and partition machine learning models in just two lines of code | AI, CAS, Data Science, Machine Learning, Viya
+07/23/24 | [sql_remerging_summary_statistics.sas](https://github.com/stu-code/sas-tips/blob/main/sql_remerge_summary_statistics.sas) | NOTE: The query requires remerging summary statistics back with the original data. What does this mean? It's actually one of SAS's coolest SQL features! | Data Engineering, Efficiency, SQL
