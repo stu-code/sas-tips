@@ -9,7 +9,7 @@
                                         # #####     #           #   ######  
                         
                                                        T I P S 
-                  Fancy ASCII art until I can do something cool in GIMP (which may never happen at this point)
+          Fancy ASCII art until I can do something cool in GIMP (which may never happen at this point)
 
 A collection of SAS examples and tips. All SAS programs are self-contained and will run independently. 
 Any programs with an external data dependency are downloaded within the program from the data folder.
