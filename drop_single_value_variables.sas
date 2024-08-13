@@ -27,15 +27,18 @@ data have;
     dropme3 = 1;
 run;
 
-/* Calculate the cardinality of each variable 
-   Alternatively in Viya, you can use PROC CARDINALITY */
+/* We need ODS output on to get this table, but we do not
+   want to actually output anything. This options does that.*/
 ods select none;
 
+/* Calculate the cardinality of each variable 
+   Alternatively in Viya, you can use PROC CARDINALITY. */
 proc freq data=have nlevels;
-   ods output nlevels=cardinality;
    tables _ALL_ / noprint;
+   ods output nlevels=cardinality;
 run;
 
+/* Reset our ODS option */
 ods select all;
 
 /* Select all variables with a cardinality of 1,
