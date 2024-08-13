@@ -16,8 +16,7 @@
     Sometimes you have really big data and you need to find variables
     that only have a cardinality of one. Other times you want to not
     only find those variables, but drop them entirely from your dataset.
-    Here's how you do that using PROC FREQ.
-
+    Here's how you do that using PROC FREQ and PROC CARDINALITY in Viya.
 ****************************************************/
 
 /* Sample data */
@@ -29,13 +28,12 @@ data have;
 run;
 
 /* Calculate the cardinality of each variable 
-   Alternatively in Viya, you can use PROC CARDINALITY.
-   If nlevels=1, then you have */
+   Alternatively in Viya, you can use PROC CARDINALITY */
 ods select none;
 
 proc freq data=have nlevels;
-   tables _ALL_ / noprint;
    ods output nlevels=cardinality;
+   tables _ALL_ / noprint;
 run;
 
 ods select all;
@@ -49,9 +47,24 @@ proc sql noprint;
     where nlevels=1;
 quit;
 
-/* Drop the variables you don't want */
+/* Drop the variables we don't want */
 data want;
     set have;
     drop &dropvars;
 run;
 
+/***********************************************/
+/*********** Get cardinality in Viya ***********/
+/***********************************************/
+cas;
+caslib _ALL_ assign;
+
+data casuser.have;
+    set sashelp.cars;
+    dropme1 = 'foo';
+    dropme2 = 'bar';
+    dropme3 = 1;
+run;
+
+proc cardinality data=casuser.have outcard=casuser.outcard;
+run;
