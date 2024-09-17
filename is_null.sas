@@ -36,10 +36,10 @@
 
 /* is_null macro. Add this to your includes */
 %macro is_null(macvar);
-	%if %symexist(&macvar.) %then %do;
-		%sysevalf(%superq(%superq(macvar)) =, boolean)
-	%end;
-		%else 1
+    %if %symexist(&macvar.) %then %do;
+        %sysevalf(%superq(%superq(macvar)) =, boolean)
+    %end;
+        %else 1
 %mend is_null;
 
 /* Let's try using a conditional with a non-existent macro variable */
@@ -71,4 +71,3 @@
 
 /* If you need to check if a macro variable is null, empty, or if it has a value,
    you canuse %is_null(macrovar) instead. */
-
