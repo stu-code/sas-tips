@@ -63,9 +63,9 @@
     %let bar=;
     %let baz=10;
 
-	%if(%is_null(foo) )    %then %put **** Macro variable foo does not exist;
-	%if(%is_null(bar) )    %then %put **** Macro variable bar is null;
-	%if(%is_null(baz) = 0) %then %put **** Macro variable notblank has a value;
+    %if(%is_null(foo) )    %then %put **** Macro variable foo does not exist;
+    %if(%is_null(bar) )    %then %put **** Macro variable bar is null;
+    %if(%is_null(baz) = 0) %then %put **** Macro variable notblank has a value;
 %mend;
 %test3;
 
