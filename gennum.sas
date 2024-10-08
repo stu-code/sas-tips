@@ -7,7 +7,7 @@
          #      ###    #         #          # 
           # #####     #           #   ######  
                                       
-                 Tip Tuesday: 10/01/24    
+                 Tip Tuesday: 10/08/24    
                    Generation Numbers
     -----------------------------------------------
     Stu Sztukowski | https://linkedin.com/in/StatsGuy
