@@ -28,6 +28,8 @@
         
         These directories are to your SASHome install and your python.exe install, respectively.
         Once you set these environment variables, restart your SAS session.
+
+        Documentation: https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lecompobjref/p18qp136f91aaqn1h54v3b6pkant.htm
 ****************************************************/
 
 /* Determine if it's a leap year:
