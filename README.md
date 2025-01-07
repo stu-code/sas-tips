@@ -36,3 +36,4 @@ Date          | Program       | Description | Tags
 09/17/24 | [is_null.sas](https://github.com/stu-code/sas-tips/blob/main/is_null.sas) | A macro that determines if a macro variable is either null or non-existent | Data Engineering, Macro
 10/01/24 | [minoperator.sas](https://github.com/stu-code/sas-tips/blob/main/minoperator.sas) | How to enable and use the IN operator with macro lists | Data Engineering, Macro
 10/08/24 | [genmax.sas](https://github.com/stu-code/sas-tips/blob/main/genmax.sas) | Automatically create backups of your SAS datasets with the genmax dataset option | DATA Step, Data Engineering
+01/07/24 | [python_function_integration.sas](https://github.com/stu-code/sas-tips/blob/main/python_function_integration.sas) | Create Python functions in SAS and use them within a DATA Step | DATA Step, Data Engineering, FCMP, Open Source, Python
