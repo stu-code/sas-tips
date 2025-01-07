@@ -35,4 +35,4 @@ Date          | Program       | Description | Tags
 08/13/24 | [drop_single_value_variables.sas](https://github.com/stu-code/sas-tips/blob/main/drop_single_value_variables.sas) | How to find and drop all variables with too low cardinality from a dataset | CAS, Data Engineering, Data Science, Viya
 09/17/24 | [is_null.sas](https://github.com/stu-code/sas-tips/blob/main/is_null.sas) | A macro that determines if a macro variable is either null or non-existent | Data Engineering, Macro
 10/01/24 | [minoperator.sas](https://github.com/stu-code/sas-tips/blob/main/minoperator.sas) | How to enable and use the IN operator with macro lists | Data Engineering, Macro
-10/08/24 | [gennum.sas](https://github.com/stu-code/sas-tips/blob/main/gennum.sas) | Automatically create backups of your SAS datasets with the gennum dataset option | DATA Step, Data Engineering
+10/08/24 | [genmax.sas](https://github.com/stu-code/sas-tips/blob/main/genmax.sas) | Automatically create backups of your SAS datasets with the genmax dataset option | DATA Step, Data Engineering
