@@ -23,7 +23,7 @@
     Pre-requisites:
         1. You have SAS 9.4M6 or higher
         2. Set the following Environment variables:
-            MASM2_PATH: ...\SASHome\SASFoundation\9.4\tkmas\sasmisc\mas2py.py
+            MAS_M2PATH: ...\SASHome\SASFoundation\9.4\tkmas\sasmisc\mas2py.py
             MAS_PYPATH: ...\python.exe
         
         These directories are to your SASHome install and your python.exe install, respectively.
