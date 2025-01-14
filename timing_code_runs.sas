@@ -54,7 +54,6 @@ run;
         %local desc&i;
     %end;
 
-
     %let now = %sysfunc(transtrn(%sysfunc(datetime()), ., %str()));
 
     %do t = 1 %to &trials;
