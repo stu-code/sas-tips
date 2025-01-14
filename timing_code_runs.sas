@@ -15,7 +15,7 @@
 
     Ever have multiple ways of running your code and want to
     figure out which one is fastest? Test it! The timeit macro
-    is inspired by the %%timeit magic function in Jupyter Notebooks.
+    is inspired by the %timeit magic function in Jupyter Notebooks.
     This is an easy-to-use function that only requires you to paste
     your code chunks into it. At the end it will print a report
     with the average and standard deviation of all runs in seconds.
