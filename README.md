@@ -37,3 +37,4 @@ Date          | Program       | Description | Tags
 10/01/24 | [minoperator.sas](https://github.com/stu-code/sas-tips/blob/main/minoperator.sas) | How to enable and use the IN operator with macro lists | Data Engineering, Macro
 10/08/24 | [genmax.sas](https://github.com/stu-code/sas-tips/blob/main/genmax.sas) | Automatically create backups of your SAS datasets with the genmax dataset option | DATA Step, Data Engineering
 01/07/24 | [python_function_integration.sas](https://github.com/stu-code/sas-tips/blob/main/python_function_integration.sas) | Create Python functions in SAS and use them within a DATA Step | DATA Step, Data Engineering, FCMP, Open Source, Python
+01/14/25 | [timing_code_runs.sas](https://github.com/stu-code/sas-tips/blob/main/timing_code_runs.sas) | An example of using the [timeit macro](https://github.com/stu-code/sas/blob/master/utility-macros/timeit.sas) to test how fast code runs on average. | Data Engineering, timeit, Timing
