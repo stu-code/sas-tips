@@ -75,9 +75,9 @@ run;
         %let time&n = %sysevalf(%sysfunc(datetime())-&start); 
      */
         /**** Code 1 ****/
-        %let n = %eval(&n+1);
+        %let n      = %eval(&n+1);
         %let desc&n = Where dataset option;
-        %let start=%sysfunc(datetime());
+        %let start  = %sysfunc(datetime());
            proc sql noprint;
                 create table test(where=(make = 'BMW')) as
                     select t1.make, t2.model
@@ -89,9 +89,9 @@ run;
         %let time&n = %sysevalf(%sysfunc(datetime())-&start);
 
         /**** Code 2 ****/
-        %let n = %eval(&n+1);
+        %let n      = %eval(&n+1);
         %let desc&n = Where clause;
-        %let start=%sysfunc(datetime());
+        %let start  = %sysfunc(datetime());
              proc sql noprint;
                 create table test2 as
                     select t1.make, t2.model
