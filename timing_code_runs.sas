@@ -45,7 +45,7 @@ data table2;
     where make IN('BMW', 'Audi', 'Porsche');
 run;
 
-%macro timeit(trials=100);
+%macro timeit(times=100);
 
     /* If testing macro functions, make sure these are local */
     %local i n t start now;
@@ -56,31 +56,31 @@ run;
 
     %let now = %sysfunc(transtrn(%sysfunc(datetime()), ., %str()));
 
-    %do t = 1 %to &trials;
+    %do t = 1 %to &times;
 
         %let n = 0; /* Do not change */
 
-     /* Define your code chunks below 
+     /* Define your code snippets below 
 
         **** Important ****
 
-        You must increment the variable n with each code chunk. To create 
-        a code chunk to test, use this skeleton code:
+        You must increment the variable n with each code snippet. To create 
+        testing block, copy and paste this code:
 
         %let n      = %eval(&n+1);
-        %let desc&n = Method 1;
+        %let desc&n = Short description here;
         %let start  = %sysfunc(datetime());
-            <code>
+            <code snippet goes here>
         %let time&n = %sysevalf(%sysfunc(datetime())-&start); 
      */
 
         /*************************************************************/
-        /********************* Code Chunks Here **********************/
+        /********************* Code To Benchmark *********************/
         /*************************************************************/
 
         /**** Code 1 ****/
         %let n      = %eval(&n+1);
-        %let desc&n = Where dataset option;
+        %let desc&n = Method 1;
         %let start  = %sysfunc(datetime());
            proc sql noprint;
                 create table test(where=(make = 'BMW')) as
@@ -94,7 +94,7 @@ run;
 
         /**** Code 2 ****/
         %let n      = %eval(&n+1);
-        %let desc&n = Where clause;
+        %let desc&n = Method 2;
         %let start  = %sysfunc(datetime());
              proc sql noprint;
                 create table test2 as
@@ -108,18 +108,21 @@ run;
         %let time&n = %sysevalf(%sysfunc(datetime())-&start);
 
         /*************************************************************/
-        /******************* End Code Chunks Here ********************/
+        /******************* End Code To Benchmark *******************/
         /*************************************************************/
 
-        data trial_&now;
+        data time_&now;
             %do i = 1 %to &n;
                 time&i = &&time&i;
             %end;
         run;
 
-        proc append base=times_&now data=trial_&now;
+        proc append base=all_times_&now data=time_&now;
         run;
     %end;
+
+    title "Total runs: &times";
+    title2 "Times are in seconds";
 
     proc sql;
         select mean(time1) as avg_time1 label="Avg (s): &desc1" format=8.3
@@ -129,11 +132,13 @@ run;
              , std(time&i)  as std_time&i label="Std (s): &&desc&i" format=8.3
              %end;
 
-        from times_&now;
+        from all_times_&now;
     quit;
 
+    title; title2;
+
     proc datasets lib=work nolist;
-        delete trial_&now times_&now;
+        delete time_&now all_times_&now;
     quit;
 
 %mend;
