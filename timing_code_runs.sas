@@ -68,9 +68,9 @@ run;
         You must increment the variable n with each code chunk. To create 
         a code chunk to test, use this skeleton code:
 
-        %let n = %eval(&n+1);
+        %let n      = %eval(&n+1);
         %let desc&n = Method 1;
-        %let start=%sysfunc(datetime());
+        %let start  = %sysfunc(datetime());
             <code>
         %let time&n = %sysevalf(%sysfunc(datetime())-&start); 
      */
