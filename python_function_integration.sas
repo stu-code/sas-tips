@@ -102,3 +102,13 @@ data _null_;
     if(pyIsLeapYear(date)) then put date year4. ' is a leap year and we used Python in SAS';
         else put date year4. ' is not a leap year and we used Python in SAS';
 run;
+
+/* And it also works in SQL ! */
+title 'Iron/Steel Exports on Leap Years';
+
+proc sql;
+    select date as year, steel
+    from sashelp.steel
+    where pyIsLeapYear(year) = 1
+    ;
+quit;
