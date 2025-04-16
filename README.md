@@ -1,15 +1,6 @@
-# sas-tips
-
-                                         #######          #          ######
-                                       ####              # #        #   
-                                       ###  ###         #   #       #      
-                                        ###   ###      #     #       #####
-                                          ###  ###    #########           #
-                                       #      ###    #         #          # 
-                                        # #####     #           #   ######  
-                        
-                                                       T I P S 
-          Fancy ASCII art until I can do something cool in GIMP (which may never happen at this point)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/18e0cd3f-362a-485f-9e15-09172c800ba7">
+</p>
 
 A collection of SAS examples and tips. All SAS programs are self-contained and will run independently. 
 Any programs with an external data dependency are downloaded within the program from the data folder.
