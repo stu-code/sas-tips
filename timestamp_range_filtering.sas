@@ -7,7 +7,7 @@
          #      ###    #         #          # 
           # #####     #           #   ######  
                                       
-                 Tip Tuesday: 04/21/25     
+                 Tip Tuesday: 04/22/25     
        Efficiently filtering time series with ranges
     -----------------------------------------------
     Stu Sztukowski | https://linkedin.com/in/StatsGuy
