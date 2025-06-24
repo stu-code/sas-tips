@@ -51,7 +51,7 @@
 /*********************************************/
 /******** Example 1: Reading a tarball *******/
 /*********************************************/
-filename tarball pipe "tar -xOzf &work/hmeq.tar.gz hmeq.csv";
+filename tarball pipe "tar -xOzf &outdir/hmeq.tar.gz hmeq.csv";
 
 data hmeq;
     infile tarball dsd dlm=',' firstobs=2;
@@ -68,7 +68,7 @@ run;
 
    Pipe the output of unzip directly into gunzip, then stream the results 
 */
-filename zipgz pipe "unzip -p &work/hmeq.zip | gunzip -c";
+filename zipgz pipe "unzip -p &outdir/hmeq.zip | gunzip -c";
 
 data hmeq2;
     infile zipgz dsd dlm=',' firstobs=2;
