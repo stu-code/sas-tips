@@ -36,3 +36,4 @@ Date          | Program       | Description | Tags
 05/06/25 | [count_nonmissing_char_vars.sas](./count_nonmissing_char_vars.sas) | An easy way to count the number of non-missing values in all character variables | Data Science, Data Engineering, Efficiency, PROC FREQ
 05/20/25 | [read_tarball_zip_csv.sas](./read_tarball_zip_csv.sas) | Use the `filename pipe` statement to read .tar.gz files and zipped gz files in Linux | Data Science, Data Engineering, tarball, .tar.gz, zip
 06/24/25 | [proc_expand.sas](./proc_expand.sas) | PROC EXPAND tricks to perform lags, leads LOCF, moving averages, forward moving averages, and much more | Data Science, Data Engineering, Lag, Lead, LOCF, PROC EXPAND 
+07/01/25 | [proc_esm.sas](./proc_esm.sas) | PROC ESM tricks to perform intelligent interpolation by replacing missing values with one-step ahead forecasts | Data Science, Data Engineering, ESM, Forecasting, Interpolation, PROC ESM
