@@ -14,13 +14,19 @@
                    | https://github.com/stu-code
 
     PROC STDIZE is used to standardize data, which is
-    an important step to do before modeling. You can also
-    use it to quickly replace missing values with zeros.
-    This prevents you from needing to write a loop to go
-    through all of your data and set them as zero. It is also
-    significantly more efficient than using SQL or needing to
-    make multiple PROC calls to achieve the standardization
-    you need.
+    an important step to do before modeling. As another 
+	interesting function, you can also use it to quickly
+    replace missing values with zeros. This prevents you
+    from needing to write a loop to go through all of your 
+    data and set them as zero. It is also significantly
+    more efficient than using SQL or needing to make multiple
+    PROC calls to achieve the standardization you need.
+
+    IMPORTANT NOTE: Setting missing values to 0 should only
+	be done if you know the missing value represents 0. If it
+	does not, you need to either impute it or drop it. Do not
+	arbitrarily set missing values to 0 unless you have a good
+	reason.
 ****************************************************/
 
 /* Sample Data */
