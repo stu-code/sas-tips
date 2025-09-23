@@ -26,14 +26,22 @@
     Details: https://go.documentation.sas.com/doc/en/pgmsascdc/v_066/casstat/casstat_kclus_overview.htm
 ****************************************************/
 
-/* Try with defaults */
-proc robustreg data=sasuser.growth plots=all;
+/* Download sample data */
+filename workdir "%sysfunc(getoption(work))/growth.sas7bdat";
+
+proc http
+    method=get 
+    url="https://github.com/stu-code/sas-tips/raw/refs/heads/main/data/growth.sas7bdat" 
+    out=workdir;
+run;
+
+/* Use the estimation option that ROBUSTREG recommended */
+proc robustreg data=growth method=MM plots=all;
     id country;
     model GDP = LFG GAP EQP NEQ / diagnostics leverage;
 run;
 
-/* Use the estimation option that ROBUSTREG recommended */
-proc robustreg data=sasuser.growth method=MM plots=all;
+proc robustreg data=growth plots=all;
     id country;
     model GDP = LFG GAP EQP NEQ / diagnostics leverage;
 run;
