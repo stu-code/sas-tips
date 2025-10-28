@@ -39,7 +39,7 @@
 
 %put 10! is %factorial(10);
 
-/* Calculate the fibonacci sequence of an number using recursion.
+/* Calculate the nth fibonacci number using recursion.
    This is another classic computer science intro-to-recursion
    problem. */
 %macro fibonacci(n);
@@ -56,7 +56,7 @@
     %end;
 %mend;
 
-%put The fibonacci sequence of 10 is %fibonacci(10);
+%put The 10th fibonacci number is %fibonacci(10);
 
 /* Build a nested case statement recursively:
     case when condition1 then value1
