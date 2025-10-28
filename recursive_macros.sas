@@ -28,13 +28,9 @@
    This is the classic computer science intro-to-recursion
    problem. */
 %macro factorial(n);
-    %if &n = 0 %then %do;
-        1
-    %end;
+    %if &n = 0 %then 1;
 
-    %else %do;
-        %eval(&n * %factorial(%eval(&n-1)))
-    %end;
+    %else %eval(&n * %factorial(%eval(&n-1)));
 %mend;
 
 %put 10! is %factorial(10);
@@ -43,13 +39,9 @@
    This is another classic computer science intro-to-recursion
    problem. */
 %macro fibonacci(n);
-    %if &n LE 1 %then %do;
-        &n
-    %end;
+    %if &n LE 1 %then &n;
 
-    %else %do;
-        %eval(%fibonacci(%eval(&n-1)) + %fibonacci(%eval(&n-2)))
-    %end;
+    %else %eval(%fibonacci(%eval(&n-1)) + %fibonacci(%eval(&n-2)));
 %mend;
 
 %put The 10th fibonacci number is %fibonacci(10);
