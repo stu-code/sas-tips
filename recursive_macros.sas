@@ -43,12 +43,8 @@
    This is another classic computer science intro-to-recursion
    problem. */
 %macro fibonacci(n);
-    %if &n = 0 %then %do;
-        0
-    %end;
-
-    %else %if &n = 1 %then %do;
-        1
+    %if &n LE 1 %then %do;
+        &n
     %end;
 
     %else %do;
