@@ -29,8 +29,7 @@
    problem. */
 %macro factorial(n);
     %if &n = 0 %then 1;
-
-    %else %eval(&n * %factorial(%eval(&n-1)));
+        %else %eval(&n * %factorial(%eval(&n-1)));
 %mend;
 
 %put 10! is %factorial(10);
@@ -40,8 +39,7 @@
    problem. */
 %macro fibonacci(n);
     %if &n LE 1 %then &n;
-
-    %else %eval(%fibonacci(%eval(&n-1)) + %fibonacci(%eval(&n-2)));
+        %else %eval(%fibonacci(%eval(&n-1)) + %fibonacci(%eval(&n-2)));
 %mend;
 
 %put The 10th fibonacci number is %fibonacci(10);
